@@ -23,7 +23,14 @@ async function startInquirer() {
     {
       type: "input",
       name: "text",
-      message: "What text would you like? Please enter 3 characters",
+      message: "What text would you like? Please enter up to 3 characters:",
+      validate: function (input) {
+        if (input.length > 3) {
+          return "Please enter no more than 3 characters!";
+        } else {
+          return true;
+        }
+      },
     },
     {
       type: "input",
