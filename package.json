@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/ionscion/savage-super-gen#readme",
   "dependencies": {
+    "color": "^4.2.3",
     "inquirer": "^8.2.4"
   },
   "devDependencies": {

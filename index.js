@@ -1,6 +1,7 @@
 const { Shape, Circle, Triangle, Square } = require("./lib/shapes");
 const inquirer = require("inquirer");
 const fs = require("fs");
+const color = require("color");
 const genSvg = require("./lib/genSvg");
 
 async function startInquirer() {
@@ -18,7 +19,16 @@ async function startInquirer() {
     {
       type: "input",
       name: "shapeColor",
-      message: "What color would you like the shape to be?",
+      message:
+        "What color would you like the shape to be? Enter color name or hexadecimal code (#xxxxxx):",
+      validate: function (input) {
+        try {
+          color(input);
+          return true;
+        } catch (error) {
+          return "Please enter a valid color!";
+        }
+      },
     },
     {
       type: "input",
@@ -35,7 +45,16 @@ async function startInquirer() {
     {
       type: "input",
       name: "textColor",
-      message: "What text color would you like?",
+      message:
+        "What text color would you like? Enter color name or hexadecimal code (#xxxxxx):",
+      validate: function (input) {
+        try {
+          color(input);
+          return true;
+        } catch (error) {
+          return "Please enter a valid color!";
+        }
+      },
     },
   ]);
 
