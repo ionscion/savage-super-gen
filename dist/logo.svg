@@ -1,8 +1,8 @@
 
   <svg version="1.1" width="300" height="200">
   
-  <polygon points="150, 18 244, 182 56, 182" fill="green"/>
+  <rect x="100" y="50" width="150" height="150" fill="blue"/>
   
-  <text x="150" y="125" font-size="60" text-anchor="middle" fill="orange">ben</text>
+  <text x="175" y="150" font-size="60" text-anchor="middle" fill="orange">BEN</text>
   
   </svg>
