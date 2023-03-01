@@ -63,17 +63,20 @@ async function startInquirer() {
   switch (shape) {
     case "Circle":
       newShape = new Circle(shapeColor, text, textColor);
-      svg = genSvg.genCircleSvg(newShape);
+      svg = genSvg.genShapeSvg(newShape);
+    //   svg = genSvg.genCircleSvg(newShape);
       writeToFile(svg);
       break;
     case "Triangle":
       newShape = new Triangle(shapeColor, text, textColor);
-      svg = genSvg.genTriangleSvg(newShape);
+      svg = genSvg.genShapeSvg(newShape);
+    //   svg = genSvg.genTriangleSvg(newShape);
       writeToFile(svg);
       break;
     case "Square":
       newShape = new Square(shapeColor, text, textColor);
-      svg = genSvg.genSquareSvg(newShape);
+    //   svg = genSvg.genSquareSvg(newShape);
+      svg = genSvg.genShapeSvg(newShape);
       writeToFile(svg);
       break;
     default:

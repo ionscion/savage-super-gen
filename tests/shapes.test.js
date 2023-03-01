@@ -54,3 +54,13 @@ describe("render circle", () => {
       );
     });
   });
+
+  describe("render square", () => {
+    test("Render method returns correct svg string with color entered", () => {
+      const shape = new Square();
+      shape.setColor("orange");
+      expect(shape.render()).toEqual(
+        `<rect x="100" y="50" width="150" height="150" fill="orange"/>`
+      );
+    });
+  });
