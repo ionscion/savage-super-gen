@@ -20,7 +20,7 @@ async function startInquirer() {
       type: "input",
       name: "shapeColor",
       message:
-        "What color would you like the shape to be? Enter color name or hexadecimal code (#xxxxxx):",
+        "What color would you like the shape to be? Enter color name (lowercase) or hexadecimal code (#xxxxxx):",
       validate: function (input) {
         try {
           color(input);
@@ -46,7 +46,7 @@ async function startInquirer() {
       type: "input",
       name: "textColor",
       message:
-        "What text color would you like? Enter color name or hexadecimal code (#xxxxxx):",
+        "What text color would you like? Enter color name (lowercase) or hexadecimal code (#xxxxxx):",
       validate: function (input) {
         try {
           color(input);
@@ -64,18 +64,15 @@ async function startInquirer() {
     case "Circle":
       newShape = new Circle(shapeColor, text, textColor);
       svg = genSvg.genShapeSvg(newShape);
-    //   svg = genSvg.genCircleSvg(newShape);
       writeToFile(svg);
       break;
     case "Triangle":
       newShape = new Triangle(shapeColor, text, textColor);
       svg = genSvg.genShapeSvg(newShape);
-    //   svg = genSvg.genTriangleSvg(newShape);
       writeToFile(svg);
       break;
     case "Square":
       newShape = new Square(shapeColor, text, textColor);
-    //   svg = genSvg.genSquareSvg(newShape);
       svg = genSvg.genShapeSvg(newShape);
       writeToFile(svg);
       break;
