@@ -36,8 +36,9 @@ a logo.
 - Please check the examples folder to see some various examples of previously generated logos
 
 ## Screenshot
-![screenshot of final product]()
--TODO
+![screenshot of final product](./Assets/svg-logo-final.jpeg)
+
 
 ## Link to Video Walkthrough
-- TODO
+Please follow the link below to view walkthrough video
+- https://drive.google.com/file/d/1uk_e5ipkUIwHlD-QFZiHiPfkb-Ukz_BB/view
